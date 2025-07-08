@@ -1,0 +1,752 @@
+[
+  {
+    "question": "1.‌EOS Network在2025年3月宣布战略转型，其新品牌名称和核心业务方向是什么？‌",
+    "options": [
+      "exSat - 专注于区块链保险服务",
+      "Ceffu - 提供跨链支付解决方案",
+      "Vaulta - 聚焦Web3银行服务（如加密资产托管和支付）",
+      "Solana - 优化公链性能以支持DeFi应用"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "2.EOS作为Web3银行业基础设施的优势不包括？",
+    "options": [
+      "高流动性与广泛上市",
+      "低日均交易量",
+      "生态成就显著",
+      "涵盖多种核心业务场景"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "3.Web3银行业的变革与趋势中，哪个不是主要特点？",
+    "options": [
+      "用户全球化与年轻化",
+      "资本流动效率提升",
+      "资产流动性降低",
+      "资产无限可组合性"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "4.Vaulta的新代币符号是什么？",
+    "options": [
+      "$EOS",
+      "$A",
+      "$VLT",
+      "$WEB3"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "5.EOS和A代币兑换是否支持双向？",
+    "options": [
+      "是，始终支持",
+      "否，仅支持单向",
+      "是，但有时间限制",
+      "不确定"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "6.Vaulta钱包和账户的主要区别是什么？",
+    "options": [
+      "钱包用于保存公钥，账户用于签名交易",
+      "钱包用于保存私钥和签名交易，账户是链上名称",
+      "钱包和账户功能相同",
+      "账户用于保存私钥，钱包用于签名交易"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "7.如何获取Vaulta代币？",
+    "options": [
+      "在Vaulta官网上直接购买",
+      "在交易所购买",
+      "通过挖矿获得",
+      "向Vaulta团队申请"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "8.Vaulta网络提币时需要特别注意什么？",
+    "options": [
+      "账户名及memo要完全准确",
+      "交易所手续费",
+      "代币价格",
+      "钱包品牌"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "9.什么是Vaulta质押？",
+    "options": [
+      "将$A代币借出以获取利息",
+      "将$A代币锁定在网络中获取奖励",
+      "购买Vaulta的理财产品",
+      "参与Vaulta的治理投票"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "10.质押后的代币多久可以取回？",
+    "options": [
+      "立即",
+      "21天后",
+      "7天后",
+      "30天后"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "11.$A 质押解除的等待期间是否有奖励？",
+    "options": [
+      "有",
+      "没有",
+      "不确定",
+      "只有部分奖励"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "12.Vaulta和EOS的关系是？",
+    "options": [
+      "竞争对手",
+      "Vaulta是EOS品牌重塑后的升级版",
+      "没有关系",
+      "EOS是Vaulta的子链"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "13.Vaulta网络设有预分配的奖励池用于质押奖励，总量是多少？",
+    "options": [
+      "1亿枚EOS",
+      "2.5亿枚EOS",
+      "5亿枚EOS",
+      "10亿枚EOS"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "14. Vaulta的资源模型不包括哪一项？",
+    "options": [
+      "CPU",
+      "NET",
+      "RAM",
+      "GPU"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "15. 为什么交易失败可能会提示资源不足？",
+    "options": [
+      "CPU/NET资源不足",
+      "账户余额不足",
+      "交易金额过大",
+      "钱包版本不兼容"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "16. RAM是使用Vaulta网络必须购买的资源吗？",
+    "options": [
+      "是",
+      "否",
+      "不确定",
+      "只有部分用户需要购买"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "17.如何修改Vaulta账户的权限？",
+    "options": [
+      "在Vaulta官网上修改",
+      "在Unicove中修改",
+      "无法修改",
+      "需要联系Vaulta团队修改"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "18. Vaulta最强的竞争优势不包括哪一项？",
+    "options": [
+      "速度",
+      "安全",
+      "低效率",
+      "合规"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "19.Vaulta支持哪些资产？",
+    "options": [
+      "仅支持BTC和EOS",
+      "支持多种主流资产",
+      "仅支持稳定币",
+      "不支持任何资产"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "20.Vaulta面向哪类用户？",
+    "options": [
+      "仅面向传统银行",
+      "仅面向开发者",
+      "既面向传统银行等机构客户，也服务开发者与终端用户",
+      "仅面向个人用户"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "21.EOS与A的兑换是否有费用？",
+    "options": [
+      "有",
+      "无",
+      "不确定",
+      "只有部分交易所收费"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "22.在最初的多少个月内支持EOS与A的1:1双向兑换？",
+    "options": [
+      "1个月",
+      "2个月",
+      "3个月",
+      "4个月"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "23.Vaulta账户是通过什么来标识的？",
+    "options": [
+      "公钥",
+      "私钥",
+      "12字符的链上名称‌",
+      "钱包地址"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "24.在Vaulta网络中，钱包的主要作用是？",
+    "options": [
+      "保存公钥",
+      "‌保存私钥和签名交易‌",
+      "管理账户权限",
+      "生成交易哈希"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "25.在Vaulta网络中创建一个新账户是否需要消耗资源？",
+    "options": [
+      "从不",
+      "B‌. 视钱包而定，部分需要消耗RAM资源‌",
+      "总是需要消耗CPU",
+      "需要消耗NET"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "26.如何在多个设备上使用同一个Vaulta账户？",
+    "options": [
+      "使用账户密码",
+      "通过短信验证码",
+      "使用助记词或私钥恢复‌",
+      "通过邮箱验证"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "27.Vaulta Wallet提供哪种类型的账户注册服务？",
+    "options": [
+      "收费注册",
+      "‌免费注册‌",
+      "需要提供身份证明",
+      "需要信用卡信息"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "28.如果用户不兑换EOS代币，会有什么影响？",
+    "options": [
+      "EOS将被自动销毁",
+      "EOS的效用和流动性会逐步下降‌",
+      "EOS将自动转换为$A",
+      "用户将被封号"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "29.Vaulta质押操作在哪个页面完成？",
+    "options": [
+      "Vaulta Wallet",
+      "‌Unicove的Staking页面‌",
+      "EOS Blockchain Explorer",
+      "Coinbase"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "30.交易失败提示资源不足时，应如何解决？",
+    "options": [
+      "增加硬盘空间",
+      "‌在Unicove中租用CPU及NET资源‌（先在设置内打开高级模式）",
+      "更换钱包",
+      "重启设备"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "31.RAM的主要用途是什么？",
+    "options": [
+      "存储交易历史",
+      "‌账户创建和数据存储‌",
+      "运行智能合约",
+      "验证交易"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "32.如何修改Vaulta账户的权限？",
+    "options": [
+      "通过短信验证码",
+      "‌在Unicove中启用高级模式后设置‌",
+      "通过邮箱验证",
+      "联系Vaulta客服"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "33.Vaulta的核心业务场景不包括以下哪项？",
+    "options": [
+      "NFT交易‌",
+      "‌‌加密资产支付‌",
+      "‌数字资产保险",
+      "‌RWA（现实资产代币化）投资"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "34.Vaulta支持的资产类型不包括以下哪种？",
+    "options": [
+      "BTC",
+      "‌EOS‌",
+      "稳定币以外的法币‌",
+      "ETH"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "35.Vaulta的合作伙伴不包括以下哪家？",
+    "options": [
+      "Ceffu",
+      "Binance Custody‌",
+      "Fiat24",
+      "Cactus Custody"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "36.Vaulta面向哪两类主要客户群体？",
+    "options": [
+      "个人用户与机构用户",
+      "‌传统银行等机构客户与开发者及终端用户‌",
+      "游戏玩家与NFT收藏家",
+      "矿工与交易所"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "37. Vaulta相对于传统银行的主要优势是什么？",
+    "options": [
+      "更高的存款利率",
+      "‌更高的贷款额度",
+      "更多的物理分行",
+      "链上结算、全球资产流通与身份自治‌"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "38. 在进行代币迁移时，用户应如何保护自己的资产？",
+    "options": [
+      "使用任何提供的链接",
+      "仅使用官方链接和平台‌",
+      "相信所有社交媒体上的信息",
+      "不需要采取任何特别措施"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "39.Vaulta智能合约是否经过安全审计？",
+    "options": [
+      "未经过",
+      "‌经过Certik和Sentnl审计‌",
+      "仅经过内部审计",
+      "经过未知的第三方审计"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "40.用户持有的其他代币在Vaulta升级后是否会受到影响？",
+    "options": [
+      "会被自动转换为$A",
+      "‌不会，所有已部署的智能合约和代币合约仍可正常使用‌",
+      "会被冻结无法使用",
+      "会被销毁"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "42.VaultRAM的的前身是什么网络的RAM架构？",
+    "options": [
+      "Bitcoin",
+      "Ethereum",
+      "Vaulta（原EOS）",
+      "Cardano"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "43.Vaulta网络中的RAM主要用于什么？",
+    "options": [
+      "存储非结构化数据",
+      "提供实时数据存取能力",
+      "执行智能合约逻辑",
+      "管理网络节点"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "44.在Vaulta网络中，以下哪项操作不依赖RAM？",
+    "options": [
+      "账户创建",
+      "转账",
+      "质押",
+      "数据挖掘"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "45.RAM的初始供应量是多少？",
+    "options": [
+      "32 GB",
+      "64 GB",
+      "128 GB",
+      "256 GB"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "46.RAM停止增发前的供应扩展机制是什么？",
+    "options": [
+      "每区块增发固定量",
+      "通过市场拍卖增加",
+      "用户投票决定",
+      "不再增发"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "47.RAM从哪一年开始停止增发？",
+    "options": [
+      "2022年",
+      "2023年",
+      "2024年",
+      "2025年"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "48.RAM成为什么类型的资源后，其价值锚定于Vaulta链上真实应用需求？",
+    "options": [
+      "通胀资源",
+      "非通胀稀缺资源",
+      "公共免费资源",
+      "可无限再生资源"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "49.WRAM是什么？",
+    "options": [
+      "RAM的衍生品",
+      "Vaulta网络的治理代币",
+      "一种新的区块链协议",
+      "去中心化交易所"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "50.RAMX主要用于哪个项目的租赁？",
+    "options": [
+      "exSat",
+      "EOS RAM Market",
+      "Bancor",
+      "DEX"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "51.VaultRAM的定位是什么？",
+    "options": [
+      "数据存储平台",
+      "AI金融系统的数据信任引擎",
+      "区块链游戏平台",
+      "加密货币交易所"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "52.与传统数据库相比，VaultRAM的主要优势是什么？",
+    "options": [
+      "更高的数据存储容量",
+      "支持链上数据交易",
+      "提供更强的数据安全性与可信度",
+      "更低的运营成本"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "53.VaultRAM通过什么机制确保数据的完整性和一致性？",
+    "options": [
+      "中心化服务器管理",
+      "链上多节点共识",
+      "数据加密技术",
+      "第三方审计机构"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "54.VaultRAM主要服务于哪些对象？",
+    "options": [
+      "个人用户",
+      "大型企业",
+      "银行与金融科技公司等",
+      "政府机构"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "55.Proof of Reserve（PoR）验证系统主要解决什么问题？",
+    "options": [
+      "提高区块链交易速度",
+      "确保资产透明性",
+      "降低矿工成本",
+      "增加区块链安全性"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "56.VaultRAM的原生代币是什么？",
+    "options": [
+      "$A",
+      "$BTC",
+      "$V",
+      "$RAM"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "57.$V的总发行量对应多少GB的RAM？",
+    "options": [
+      "64 GB",
+      "128 GB",
+      "256 GB",
+      "512 GB"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "58.新用户如何购买$V？",
+    "options": [
+      "在中心化交易所购买",
+      "在Vaulta链上使用RAM或$A购买",
+      "通过银行转账购买",
+      "在VaultRAM官网直接购买"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "59.VaultRAM的主要应用场景不包括以下哪项？",
+    "options": [
+      "高价值RWA资产发行",
+      "实时合规审计与报告",
+      "社交媒体内容管理",
+      "链上ID Pass构建"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "60.VaultRAM如何支持AI模型？",
+    "options": [
+      "提供实时更新能力",
+      "提供可信源数据",
+      "加速数据检索和处理",
+      "以上都是"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "61.VaultRAM的长期发展愿景是什么？",
+    "options": [
+      "成为最大的区块链数据存储平台",
+      "建立面向未来的可信数据网络",
+      "替代所有传统数据库",
+      "成为最受欢迎的加密货币"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "62.VaultRAM与RegTech公司合作的主要领域是什么？",
+    "options": [
+      "区块链游戏开发",
+      "实时合规审计工具开发",
+      "社交媒体营销",
+      "云计算服务"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "63.以下哪项不是VaultRAM的核心价值？",
+    "options": [
+      "去中心化信任机制",
+      "低效的数据服务",
+      "高可用架构",
+      "为AI优化的数据结构"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "65. VaultRAM利用 exSat 网络的UTXO数据可以用于什么场景？",
+    "options": [
+      "AI模型训练",
+      "监管科技合规",
+      "高价值RWA资产发行",
+      "‌D. Proof of Reserve（PoR）验证"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "66. exSat 网络的核心定位是？",
+    "options": [
+      "比特币Layer1扩容链",
+      "连接比特币与智能合约的对接层（Docking Layer）",
+      "以太坊侧链",
+      "独立公链"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "67. exSat 通过什么技术扩展比特币功能？",
+    "options": [
+      "状态通道",
+      "数据可用性层+去中心化索引器",
+      "分片技术",
+      "零知识证明"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "68. exSat 的共识机制是？",
+    "options": [
+      "纯PoW",
+      "PoW+PoS混合机制",
+      "DPoS",
+      "PoA"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "69. exSat 验证器节点需质押什么资产？",
+    "options": [
+      "仅BTC",
+      "BTC+XSAT代币",
+      "仅XSAT",
+      "ETH"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "70. 成为 exSat 网络验证器的最低BTC质押量是？",
+    "options": [
+      "1 BTC",
+      "10 BTC",
+      "100 BTC",
+      "无限制"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "71.exSat数据索引依赖哪个网络资源？",
+    "options": [
+      "EOS CPU",
+      "Vaulta RAM",
+      "以太坊Gas",
+      "比特币区块空间"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "72. exSat最适合哪类开发者？",
+    "options": [
+      "比特币DeFi开发者",
+      "游戏开发者",
+      "社交应用开发者",
+      "元宇宙建造者"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "73.以下哪项是exSat的典型应用场景？",
+    "options": [
+      "NFT交易平台",
+      "比特币储备金证明（PoR）",
+      "链游资产发行",
+      "隐私币混币器"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "74. exSat与BitTrade合作主要解决？",
+    "options": [
+      "提升交易速度",
+      "增强验证节点去中心化",
+      "降低Gas费",
+      "发行稳定币"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "75. XSAT代币通过什么方式产生？",
+    "options": [
+      "团队预挖",
+      "比特币区块挖矿奖励",
+      "Vaulta 空投",
+      "机构私募"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "76.exSat跨链桥审计机构是？",
+    "options": [
+      "CertiK",
+      "BlockSec",
+      "SlowMist",
+      "PeckShield"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "77. exSat主网上线时间是？",
+    "options": [
+      "2024年10月23日",
+      "2025年1月15日",
+      "2023年12月1日",
+      "2024年7月3日"
+    ],
+    "answer": 0
+  }
+]
