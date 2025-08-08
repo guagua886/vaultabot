@@ -1,0 +1,22 @@
+[2025-07-16 15:35:44.798124] ❌ 错误处理行: ['599805724', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
+[2025-07-16 15:35:45.040259] 管理员 1985996990 为用户 406231804 增加 3 积分
+[2025-07-16 15:35:45.274510] ❌ 错误处理行: ['6808397299', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
+[2025-07-16 15:35:45.527942] 管理员 1985996990 为用户 1024576486 增加 3 积分
+[2025-07-16 15:35:45.745607] ❌ 错误处理行: ['560407857', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
+[2025-07-16 15:35:45.966262] 管理员 1985996990 为用户 6998159129 增加 3 积分
+[2025-07-16 15:35:46.181288] ❌ 错误处理行: ['375227980', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
+[2025-07-16 15:35:46.423363] 管理员 1985996990 为用户 6774952306 增加 3 积分
+[2025-07-16 15:35:46.625685] ❌ 错误处理行: ['6805661550', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
+[2025-07-16 15:35:46.829952] ❌ 错误处理行: ['6148409574', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
+[2025-07-16 15:35:47.054725] 管理员 1985996990 为用户 7178323850 增加 3 积分
+[2025-07-16 15:35:47.413303] ❌ 错误处理行: ['7142743476', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
+[2025-07-16 15:35:47.643251] 管理员 1985996990 为用户 5680233396 增加 3 积分
+[2025-07-16 15:35:47.868349] 管理员 1985996990 为用户 1317595451 增加 3 积分
+[2025-07-16 15:35:48.078797] ❌ 错误处理行: ['7375165196', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
+[2025-07-16 15:35:48.278204] ❌ 错误处理行: ['6222260424', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
+[2025-07-16 15:35:48.498211] 管理员 1985996990 为用户 406231804 增加 3 积分
+[2025-07-16 15:35:48.703959] ❌ 错误处理行: ['986696579', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
+[2025-07-16 15:35:49.003539] 管理员 1985996990 为用户 2095320331 增加 3 积分
+[2025-07-16 15:35:49.239913] ❌ 错误处理行: ['7142743476', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
+[2025-07-16 15:35:50.049559] ❌ 错误处理行: ['1379361026', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
+[2025-07-16 15:35:50.317307] ❌ 错误处理行: ['397225450', '3'], 错误: A request to the Telegram API was unsuccessful. Error code: 403. Description: Forbidden: bot can't initiate conversation with a user
