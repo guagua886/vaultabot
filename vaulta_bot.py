@@ -148,7 +148,36 @@ CREATE TABLE IF NOT EXISTS monthly_snapshot (
     ''')
 conn.commit()
 
+cursor.execute('''
+        CREATE TABLE IF NOT EXISTS monthly_points (
+            telegram_id INTEGER,
+            month TEXT,                 -- 形如 '2025-08'
+            earned INTEGER DEFAULT 0,
+            PRIMARY KEY (telegram_id, month)
+        )
+    ''')
+
+conn.commit()
+
 conn.close()
+
+def add_monthly_points(telegram_id: int, delta: int):
+    if delta <= 0:
+        return  # 不记录负数
+
+    month_str = datetime.now().strftime('%Y-%m')
+    conn = sqlite3.connect('telegram_bot.db')
+    cur = conn.cursor()
+
+    cur.execute('''
+        INSERT INTO monthly_points (telegram_id, month, earned)
+        VALUES (?, ?, ?)
+        ON CONFLICT(telegram_id, month)
+        DO UPDATE SET earned = earned + excluded.earned
+    ''', (telegram_id, month_str, delta))
+
+    conn.commit()
+    conn.close()
 
 def log_transfer(sender_id, recipient_id, amount):
     conn = sqlite3.connect('telegram_bot.db')
@@ -555,6 +584,7 @@ def handle_add_points(message):
 
         new_points = user[2] + points_to_add
         update_user(target_id, 'points', new_points)
+        add_monthly_points(target_id, points_to_add)
 
         # 管理日志
         with open(LOG_FILE, 'a', encoding='utf-8') as log_file:
@@ -628,6 +658,8 @@ def handle_uploaded_csv(message):
                 if user:
                     new_points = user[2] + points
                     update_user(telegram_id, 'points', new_points)
+                    add_monthly_points(telegram_id, points)
+
                     bot.send_message(
                         telegram_id,
                         get_text("batch_points_awarded_dm").format(points=points, new_points=new_points)
@@ -965,6 +997,7 @@ def handle_quiz_answer(call):
     if choice == current_quiz.get("answer"):
         user = get_user(telegram_id)
         update_user(telegram_id, 'points', user[2] + 1)
+        add_monthly_points(telegram_id, 1)
         bot.send_message(call.message.chat.id, get_text("quiz_correct_public").format(name=name))
     else:
         bot.send_message(call.message.chat.id, get_text("quiz_wrong_public").format(name=name))
@@ -1048,45 +1081,33 @@ def handle_ranking(message):
         if message.chat.id != ALLOWED_GROUP_ID:
             return
 
-    conn = sqlite3.connect('telegram_bot.db')
-    cursor = conn.cursor()
+    month_str = datetime.now().strftime('%Y-%m')
 
-    cursor.execute('''
-        SELECT 
-            u.telegram_id,
-            u.name,
-            u.points,
-            COALESCE(s.snapshot_points, 0) as snapshot
+    conn = sqlite3.connect('telegram_bot.db')
+    cur = conn.cursor()
+    cur.execute('''
+        SELECT u.telegram_id, u.name, COALESCE(m.earned, 0) AS earned
         FROM users u
-        LEFT JOIN monthly_snapshot s 
-            ON s.telegram_id = u.telegram_id
-            AND s.month = (
-                SELECT MAX(month) FROM monthly_snapshot 
-                WHERE telegram_id = u.telegram_id
-            )
-    ''')
-    rows = cursor.fetchall()
+        LEFT JOIN monthly_points m
+          ON m.telegram_id = u.telegram_id AND m.month = ?
+        WHERE COALESCE(m.earned, 0) > 0
+        ORDER BY earned DESC
+        LIMIT 20
+    ''', (month_str,))
+    rows = cur.fetchall()
     conn.close()
 
-    # 计算当月积分（只显示本月新增积分 > 0 的用户）
-    ranking = []
-    for row in rows:
-        telegram_id, name, points, snapshot = row
-        monthly_score = points - snapshot
-        if monthly_score > 0:
-            ranking.append((telegram_id, name or get_text("unknown_name"), monthly_score))
+    title = get_text("monthly_ranking_title")
+    item_tpl = get_text("monthly_ranking_item")
+    unknown_name = get_text("unknown_name")
 
-    # 排序
-    ranking.sort(key=lambda x: x[2], reverse=True)
-
-    # 组装消息
-    if not ranking:
-        bot.reply_to(message, get_text("ranking_empty"))
-        return
-
-    msg = get_text("ranking_header")
-    for idx, (tid, name, score) in enumerate(ranking[:20], 1):
-        msg += get_text("ranking_line").format(idx=idx, name=name, tid=tid, score=score)
+    msg = title + "\n\n"
+    if not rows:
+        msg += get_text("monthly_ranking_empty")  # 可选：当无数据时的提示
+    else:
+        for i, (tid, name, earned) in enumerate(rows, 1):
+          display_name = name or unknown_name
+          msg += item_tpl.format(rank=i, name=display_name, tid=tid, earned=earned) + "\n"
 
     bot.reply_to(message, msg)
 
@@ -1127,6 +1148,7 @@ def handle_start(message):
         inviter = get_user(int(invited_by))
         if inviter:
             update_user(int(invited_by), 'points', inviter[2] + 3)
+            add_monthly_points(int(invited_by), 3)
 
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=False)
     markup.add('/start','/quiz', '/bind', '/me', '/invites','/submit')
@@ -1288,10 +1310,10 @@ def handle_me(message):
     cursor.execute("SELECT COUNT(*) FROM users WHERE invited_by = ? AND joined_group = 1", (str(telegram_id),))
     invite_count = cursor.fetchone()[0]
 
-    cursor.execute('SELECT snapshot_points FROM monthly_snapshot WHERE telegram_id = ?', (telegram_id,))
-    row = cursor.fetchone()
-    snapshot_points = row[0] if row else 0
-    month_points = user[2] - snapshot_points
+    month_str = datetime.now().strftime('%Y-%m')
+    cur.execute("SELECT COALESCE(earned,0) FROM monthly_points WHERE telegram_id = ? AND month = ?", (telegram_id, month_str))
+    row = cur.fetchone()
+    month_points = row[0] if row else 0
     conn.close()
 
     binance = user[3] if user[3] else get_text("me_unbound")
@@ -1720,6 +1742,7 @@ def handle_custom_signin_word(message):
 
         update_user(telegram_id, 'last_signin', now.strftime('%Y-%m-%d %H:%M:%S'))
         new_points = user[2] + 1
+        monthly_points_add = 1
 
         # 记录签到历史（按日期）
         record_signin_history(telegram_id, now.strftime('%Y-%m-%d'))
@@ -1729,10 +1752,12 @@ def handle_custom_signin_word(message):
         if count_signins_last_7_days(telegram_id) >= 7:
             if (not last_bonus_date) or (datetime.strptime(last_bonus_date, "%Y-%m-%d") <= now - timedelta(days=7)):
                 new_points += 2
+                monthly_points_add += 2
                 bonus_text = get_text("bonus_7in7")
                 update_user(telegram_id, 'last_bonus_date', today_str)
 
         update_user(telegram_id, 'points', new_points)
+        add_monthly_points(telegram_id, monthly_points_add)
 
         msg = bot.reply_to(
             message,
@@ -1747,6 +1772,12 @@ def handle_custom_signin_word(message):
         ))
 
         # 再次确保用户信息最新
+        name = message.from_user.first_name or ""
+        if message.from_user.last_name:
+          name += " " + message.from_user.last_name
+
+        custom_id = message.from_user.username or None  # 自定义用户名可能不存在
+
         update_user_name_and_custom_id(telegram_id, name.strip(), custom_id)
 
 

@@ -209,7 +209,10 @@
     "submit_already_exists": "⚠️ 您已提交过该链接，不能重复提交。",
     "submit_success": "✅ {platform}链接提交成功！",
     "platform_binance": "币安",
-    "platform_twitter": "推特X"
+    "platform_twitter": "推特X",
+    "monthly_ranking_title": "🏆 本月积分排行榜（前20）:",
+    "monthly_ranking_item": "{rank}. {name}（Id:{tid}）| {earned} 分",
+    "monthly_ranking_empty": "暂无数据。"
   },
   "en": {
     "welcome_new_member": "👋 Welcome {name} to the group!\n\n📌 You can earn points by signing in daily.\n➡️ Use /signinword to view today’s sign-in word.\n🏆 Use /ranking to see the leaderboard.\n📊 Message the bot privately with /me to check your stats.",
@@ -423,6 +426,9 @@
     "submit_already_exists": "⚠️ You have already submitted this link; duplicate submissions are not allowed.",
     "submit_success": "✅ {platform} link submitted successfully!",
     "platform_binance": "Binance",
-    "platform_twitter": "Twitter X"
+    "platform_twitter": "Twitter X",
+    "monthly_ranking_title": "🏆 Monthly points leaderboard (Top 20):",
+    "monthly_ranking_item": "{rank}. {name} (Id:{tid}) | {earned} pts",
+    "monthly_ranking_empty": "No data available."
   }
 }
