@@ -862,10 +862,10 @@ def handle_submit(message):
 
     markup = types.InlineKeyboardMarkup()
     markup.add(
-        types.InlineKeyboardButton("📤 提交币安文章链接", callback_data="submit_binance"),
-        types.InlineKeyboardButton("🧵 提交推特X链接", callback_data="submit_twitter")
+        types.InlineKeyboardButton(get_text("submit_btn_binance"), callback_data="submit_binance"),
+        types.InlineKeyboardButton(get_text("submit_btn_twitter"), callback_data="submit_twitter")
     )
-    bot.send_message(message.chat.id, "请选择要提交的文章类型：", reply_markup=markup)
+    bot.send_message(message.chat.id, get_text("submit_choose_type"), reply_markup=markup)
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("submit_"))
 def handle_submit_callback(call):
@@ -874,16 +874,17 @@ def handle_submit_callback(call):
         "submit_twitter": "twitter"
     }
     submit_type = type_map[call.data]
-    bot.send_message(call.message.chat.id, f"请输入您要提交的{ '币安' if submit_type == 'binance' else '推特X' }文章链接：")
+    platform_label = get_text("platform_binance") if submit_type == "binance" else get_text("platform_twitter")
+    bot.send_message(call.message.chat.id, get_text("submit_prompt_link").format(platform=platform_label))
     
     # 设置下一条消息为链接输入
     bot.register_next_step_handler(call.message, process_submission, submit_type, call.from_user.id)
     bot.answer_callback_query(call.id)
 
 def process_submission(message, submit_type, telegram_id):
-    link = message.text.strip()
+    link = (message.text or "").strip()
     if not link.startswith("http"):
-        bot.reply_to(message, "❌ 请输入有效的链接（必须以 http 开头）")
+        bot.reply_to(message, get_text("submit_invalid_link"))
         return
 
     conn = sqlite3.connect('telegram_bot.db')
@@ -891,13 +892,15 @@ def process_submission(message, submit_type, telegram_id):
     cursor.execute("SELECT 1 FROM submissions WHERE telegram_id = ? AND type = ? AND link = ?", (telegram_id, submit_type, link))
     exists = cursor.fetchone()
     if exists:
-        bot.reply_to(message, "⚠️ 您已提交过该链接，不能重复提交。")
+        bot.reply_to(message, get_text("submit_already_exists"))
     else:
         cursor.execute("INSERT INTO submissions (telegram_id, type, link) VALUES (?, ?, ?)", (telegram_id, submit_type, link))
         conn.commit()
-        bot.reply_to(message, f"✅ { '币安' if submit_type == 'binance' else '推特X' }链接提交成功！")
+        platform_label = get_text("platform_binance") if submit_type == "binance" else get_text("platform_twitter")
+        bot.reply_to(message, get_text("submit_success").format(platform=platform_label))
 
     conn.close()
+
 
 
 @bot.message_handler(commands=['add_sensitive'])
@@ -1947,7 +1950,18 @@ bot.set_my_commands([
 
 # 启动 Telegram Bot（主线程）
 print("Bot is running...")
-try:
-    bot.polling(none_stop=True)
-except Exception as e:
-    print("Polling Error:", e)
+
+while True:
+    try:
+        bot.polling(none_stop=True, timeout=60, long_polling_timeout=60)
+    except telebot.apihelper.ApiTelegramException as e:
+        if e.error_code == 502:
+            print(f"[WARN]] Telegram 502 Bad Gateway，Skip restart, wait 5 seconds to reconnect...")
+            time.sleep(5)
+            continue  # 直接继续循环，不退出
+        else:
+            print(f"[ERROR] Telegram API error: {e}")
+            time.sleep(5)
+    except Exception as e:
+        print(f"[ERROR] An unknown exception occurred: {e}")
+        time.sleep(5)

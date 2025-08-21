@@ -200,7 +200,16 @@
     "redpack_expired": "⏰ 红包已过期，无法领取。",
     "redpack_empty": "红包已经被抢光啦！",
     "redpack_claim_broadcast": "🎉 {name}（@{username} | ID:{telegram_id}）抢到了 {amount} 积分！",
-    "unknown_username": "无自定义用户名"
+    "unknown_username": "无自定义用户名",
+    "submit_btn_binance": "📤 提交币安文章链接",
+    "submit_btn_twitter": "🧵 提交推特X链接",
+    "submit_choose_type": "请选择要提交的文章类型：",
+    "submit_prompt_link": "请输入您要提交的{platform}文章链接：",
+    "submit_invalid_link": "❌ 请输入有效的链接（必须以 http 开头）",
+    "submit_already_exists": "⚠️ 您已提交过该链接，不能重复提交。",
+    "submit_success": "✅ {platform}链接提交成功！",
+    "platform_binance": "币安",
+    "platform_twitter": "推特X"
   },
   "en": {
     "welcome_new_member": "👋 Welcome {name} to the group!\n\n📌 You can earn points by signing in daily.\n➡️ Use /signinword to view today’s sign-in word.\n🏆 Use /ranking to see the leaderboard.\n📊 Message the bot privately with /me to check your stats.",
@@ -405,6 +414,15 @@
     "redpack_expired": "⏰ The red packet has expired and cannot be claimed.",
     "redpack_empty": "The red packet has been fully claimed!",
     "redpack_claim_broadcast": "🎉 {name} (@{username} | ID:{telegram_id}) claimed {amount} points!",
-    "unknown_username": "no-username"
+    "unknown_username": "no-username",
+    "submit_btn_binance": "📤 Submit Binance article link",
+    "submit_btn_twitter": "🧵 Submit Twitter X link",
+    "submit_choose_type": "Please choose the type of article to submit:",
+    "submit_prompt_link": "Please enter the {platform} article link you want to submit:",
+    "submit_invalid_link": "❌ Please enter a valid link (must start with http)",
+    "submit_already_exists": "⚠️ You have already submitted this link; duplicate submissions are not allowed.",
+    "submit_success": "✅ {platform} link submitted successfully!",
+    "platform_binance": "Binance",
+    "platform_twitter": "Twitter X"
   }
 }
